@@ -1,5 +1,5 @@
 body {
-    background: #19191B;
+    background-color: #19191B;
     color: white;
     margin: 0;
     padding: 0;
@@ -12,10 +12,6 @@ body {
     width: 90%;
     margin: 0 auto;
 }
-
-/* .wagner-logo {
-    width: 20%;
-} */
 
 .navbar {
     display: flex;
@@ -32,22 +28,28 @@ body {
     list-style-type: none;
     width: 30%;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; 
     margin: 0;
     font-size: 18px;
 }
 
 .list__item a {
     text-decoration: none;
-    color: white
+    color: white;
 }
+
 .navbar__input {
     width: 15%;
     height: 25px;
     background-color: transparent;
     border: 1px solid white;
-    border-radius: 5%;
+    border-radius: 5px;
 }
+
+.navbar__btn_burger {
+    display: none;
+}
+
 header {
     width: 100%;
     display: flex;
@@ -76,17 +78,16 @@ header {
     gap: 15px;
     width: 35%;
     height: 60px;
-    background: royalblue;
+    background-color: #5454D4;
     border: none;
     border-radius: 5px;
-    color: aliceblue;
-    font-size: 15px;
+    color: white;
+    font-size: 20px;
     font-weight: bold;
-    cursor: pointer;
 }
 
 .header__block_right {
-    /* width: 50%; */
+    /* width: 50px; */
     display: flex;
     justify-content: center;
     position: relative;
@@ -103,7 +104,7 @@ header {
 
 #vector_2 {
     top: 77px;
-    right: 50px;
+    right: 60px;
 }
 
 #vector_3 {
@@ -128,15 +129,16 @@ header {
     font-weight: 700px;
     width: 50%;
     text-align: center;
-    font-family: "Open Sans", sans-serif;
-    margin-top: 120px 0 50px;
+    font-family: 'Open Sans', sans-serif;
+    margin: 120px 0 50px;
 }
+
 .services__list {
     display: flex;
-    list-style-type: none;
+    justify-content: space-between;
     row-gap: 120px;
     flex-wrap: wrap;
-    justify-content: space-between;
+    list-style-type: none;
     padding: 0;
 }
 
@@ -145,9 +147,9 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 24px;
     margin: 0 5%;
-    text-align: centers;
+    margin-bottom: 24px;
+    text-align: center;
 }
 
 .services__title {
@@ -155,21 +157,20 @@ header {
     font-weight: 600;
     margin-bottom: 0;
 }
-
 .services__desc {
     font-size: 20px;
 }
 
 .portfolio__title {
     font-size: 58px;
-    font-weight: 800px;
-    font-family: "Nunito Sans", sans-serif;
+    font-weight: 800;
 }
+
 .portfolio__list {
     display: flex;
-    justify-content: space-between;
     list-style-type: none;
     width: 100%;
+    justify-content: space-between;
     padding: 0;
 }
 
@@ -180,25 +181,25 @@ header {
     height: min-content;
 }
 
-.portfolio__item:nth-child(2){
+.portfolio__item:nth-child(2) {
     margin-top: 90px;
 }
 
-.portfolio__item:nth-child(3){
+.portfolio__item:nth-child(3) {
     margin-top: 180px;
 }
 
 .info-block {
     display: flex;
     justify-content: space-between;
-    margin-top: 120px;
     align-items: center;
+    margin-top: 120px;
 }
 
 .info-block__title {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Opens Sans', sans-serif;
     font-size: 60px;
-    font-weight: 650;
+    font-weight: 700;
     width: 58%;
     margin: 0;
 }
@@ -206,14 +207,16 @@ header {
 .info-block__btn {
     color: white;
     border: none;
-    background-color: royalblue;
     border-radius: 5px;
-    padding: 18px 48px;
+    background:#5454D4;
+    font-size: 21px;
+    padding: 18px 46px;
     cursor: pointer;
 }
 
 footer {
     display: flex;
+
     justify-content: space-between;
     margin-top: 60px;
 }
@@ -228,4 +231,60 @@ footer {
     justify-content: space-between;
     list-style-type: none;
     width: 30%;
+}
+
+.burger-menu {
+    width: 90%;
+    background: #2c2c33;
+    position: absolute;
+    z-index: 1;
+    top: 1%;
+    left: 1%;
+    right: 1%;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+.burger-menu__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.burger-menu__btn_close {
+    margin: 4% 0;
+    width: 4%;
+    height: 4%;
+    cursor: pointer;
+}
+
+.burger-menu__input {
+    width: 30%;
+    height: 10%;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.burger-menu__list {
+    list-style-type: none;
+    padding: 0;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.burger-menu__item a {
+    text-decoration: none;
+    color: white;
+}
+
+.burger-menu__item a:hover {
+    color: #5454D4;
+    transition: .8s;
 }

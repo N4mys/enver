@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
@@ -10,43 +9,67 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=Open+Sans:wght@500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/adaptive_styles.css">
 </head>
 <body>
     <div class="container">
+        <div class="burger-menu">
+            <div class="burger-menu__content">
+                <img src="./images/cancel_btn.png" alt="" class="burger-menu__btn_close">
+                <input type="text" class="burger-menu__input">
+                <ul class="burger-menu__list">
+                    <li class="burger-menu__item">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="burger-menu__item">
+                        <a href="#">Services</a>
+                    </li>
+                    <li class="burger-menu__item">
+                        <a href="#">Our Projects</a>
+                    </li>
+                    <li class="burger-menu__item">
+                        <a href="#">About us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
         <div class="navbar">
-            <img src="./images/wagner-removebg-preview.png" alt="wagner-logo">
+            <img src="./images/logo.png" alt="logo">
             <ul class="navbar__list">
                 <li class="list__item">
-                    <a href="#">Artemovsk</a>
+                    <a href="#">Home</a>
                 </li>
                 <li class="list__item">
-                    <a href="#">Bahmut</a>
+                    <a href="#">Services</a>
                 </li>
                 <li class="list__item">
-                    <a href="#">Kyiv</a>
+                    <a href="#">Our Projects</a>
                 </li>
                 <li class="list__item">
-                    <a href="#">Mariupol'</a>
+                    <a href="#">About us</a>
                 </li>
             </ul>
             <input type="text" class="navbar__input">
+            <img src="./images/navbar_btn.png" alt="" class="navbar__btn_burger"/>
         </div>
 
         <header>
             <div class="header__block_left">
                 <h2 class="header__title_left">
-                    Wagner
+                    Build Your Awesome Platform
                 </h2>
                 <p class="header__desc_left">
-                    Вступайте в ряды ЧВК Вагнер и вы встретите конец Достойно
+                    Enver studio is a digital studio that offers several services such as UI/UX Design to developers, we will provide the best service for those of you who use our services.
                 </p>
                 <button class="header__btn">
-                    Вступить
+                    Out Services
                     <img src="./images/btn_icon.png" alt="">
                 </button>
             </div>
             <div class="header__block_right">
-                <img src="./images/prigojin-removebg-preview.png" alt="header_img">
+                <img class="header__img" src="./images/header_img.png" alt="header_img">
+
                 <img class="vector" id="vector_1" src="./images/vector_1.png" alt="">
                 <img class="vector" id="vector_2" src="./images/vector_2.png" alt="">
                 <img class="vector" id="vector_3" src="./images/vector_3.png" alt="">
@@ -54,36 +77,23 @@
             </div>
         </header>
 
+        <!-- services -->
         <div class="services">
             <h2 class="services__title_main">
-                Минусов Нет Одни Плюсы
+                The Service We Provide For You 
             </h2>
             <ul class="services__list">
                 <li class="services__item">
                     <img src="./images/services_icon_1.png" alt="" class="services__icon">
-                    <h4 class="services__title">DeveLopment</h4>
+                    <h4 class="services__title">Development</h4>
                     <p class="services__descr">
-                        Create a platform with the best and coolest quality from us.
-                    </p>
+                        Create a platform with the best and coolest quality from us.</p>
                 </li>
                 <li class="services__item">
                     <img src="./images/services_icon_2.png" alt="" class="services__icon">
                     <h4 class="services__title">UI/UX Designer</h4>
                     <p class="services__descr">
-                        We provide UI/UX Design services, and of course with the best quality
-                    </p>
-                </li>
-                <li class="services__item">
-                    <img src="./images/services_icon_3.png" alt="" class="services__icon">
-                    <h4 class="services__title">Graphic Designer</h4>
-                    <p class="services__descr">
-                        We provide Graphic Design services, with the best designers
-                    </p>
-                </li>
-                <li class="services__item">
-                    <img src="./images/services_icon_4.png" alt="" class="services__icon">
-                    <h4 class="services__title">Motion Graphic</h4>
-                    <p class="services__descr">
+
                         Create a platform with the best and coolest quality from us.
                     </p>
                 </li>
@@ -140,5 +150,19 @@
             <p class="footer__info">© 2014 Wagner, All Rights Reserved</p>
         </footer>
     </div>
+
+    <script>
+        let openBtn = document.querySelector('.navbar__btn_burger');
+        let closeBtn = document.querySelector('.burger-menu__btn_close');
+        let burgerMenu = document.querySelector('.burger-menu');
+  
+        openBtn.addEventListener('click', () => {
+          burgerMenu.style.display = 'block';
+        });
+  
+        closeBtn.addEventListener('click', () => {
+          burgerMenu.style.display = 'none';
+        });
+      </script>
 </body>
 </html>
